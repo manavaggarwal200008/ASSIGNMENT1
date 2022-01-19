@@ -1,0 +1,146 @@
+// Manav Aggarwal, 11902228
+// QUES 1
+import java.util.Scanner;
+public class MANAV 
+{
+    public static void main(String[] args) 
+    {
+        int x;
+        Scanner y = new Scanner(System.in);
+        System.out.print("number?:");
+        x = y.nextInt();
+        if(x % 2 == 0)
+        {
+            System.out.println(""+x+" is Even ");
+        }
+        else
+        {
+            System.out.println(""+x+" is Odd ");
+	}
+    }
+}
+
+
+//QUES2
+
+// Manav Aggarwal, 11902228
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        int t1 = 0, t2 = 1;
+        System.out.print("Enter the number of terms:");
+        int n=sc.nextInt();//the number of terms
+        System.out.println("" + n + " terms of fibonnaci series: ");
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+
+// Ques 3
+// Manav Aggarwal, 11902228
+import java.util.Scanner;
+public class MANAV {
+   public static void main(String args[]){
+      int num1, num2;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Plz Advise first number ::");
+      num1 = sc.nextInt();
+      System.out.println("Plz Advise second number ::");
+      num2 = sc.nextInt();
+
+      for (int i = num1; i<num2; i++)
+      {
+         int check, rem, sum = 0;
+         check = i;
+         while(check != 0) 
+         {
+            rem = check % 10;
+            sum = sum + (rem * rem * rem);
+            check = check / 10;
+         }
+         if(sum == i)
+         {
+            System.out.println(""+i+" is Armstrong no.");
+         }
+      }
+   }
+}
+
+// QUES 5
+// Manav Aggarwal, 11902228
+
+public class FirstLastDigit {
+    public static void main(String[] args) {
+	int number = 95656568;
+
+	char firstDigit = String.valueOf(number).charAt(0);
+
+        int lastDigit = number%10;
+
+	System.out.println("Number given: " + number );
+	System.out.println("First digit: " + firstDigit);
+	System.out.println("Last digit: " + lastDigit );
+
+
+	}
+}
+
+// QUES 6 Part1
+// MANAV AGGARWAL, 11902228
+public class MANAV
+
+{   
+public static void main(String args[])   
+{   
+int i, j, row=4;   
+for(i=0; i<row; i++)   
+{ 
+for(j=0; j<=i; j++)   
+{   
+System.out.print("*");   
+}
+System.out.println();   
+}   
+}   
+} 
+
+
+// Ques 7 Part2
+
+// Manav Aggarwal,11902228
+
+import java.util.Scanner;
+ 
+public class NumberPatternPrograms 
+{
+    public static void main(String[] args)
+    {
+       
+        int rows = 5;
+         
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 2*rows-i; j > i; j--)
+            {
+                System.out.print(" ");
+            }
+ 
+            for (int j = i; j >= 1; j--)
+            {
+                System.out.print(j+" ");
+            }
+ 
+            System.out.println();
+        }
+ 
+    }
+}
