@@ -1,0 +1,175 @@
+// MANAV AGGARWAL,11902228
+// DAY2
+//QUES1, sum of n natural numbers
+import java.util.*;
+ 
+public class MANAV
+{
+ public static void main(String args[])
+ {
+     int no;
+ Scanner sc = new Scanner(System.in);
+     System.out.println("Numbers want to add? ");
+     no=sc.nextInt();
+ 
+     System.out.println("Sum="+sum(no));
+ }
+ 
+ static int sum(int n)
+ {
+     if(n==0)
+         return n;
+     else 
+         return (n+sum(n-1));
+ }
+}
+
+
+
+
+// MANAV AGGARWAL,11902228
+// DAY2
+//QUES2,reverse a number
+
+import java.util.Scanner;
+public class MANAV
+{
+   
+   public static void reverse(int number) 
+   {
+       if (number < 10) 
+       {
+	   System.out.println(number);
+	   return;
+       }
+       else 
+       {
+           System.out.print(number % 10);
+           reverse(number/10);
+       }
+   }
+   public static void main(String args[])
+   {
+	int num=0;
+	System.out.println("No. you want to reverse");
+	Scanner in = new Scanner(System.in);
+	num = in.nextInt();
+	System.out.print("Reverse:");
+	reverse(num);
+	System.out.println();
+   }
+}
+
+
+
+// MANAV AGGARWAL,11902228
+// DAY2
+//QUES3, reverse a string
+
+
+import java.util.Scanner;
+public class MANAV 
+{
+
+    public static void main(String[] args) 
+    {
+        String str = "HELLO LPU";
+        String reversed = reverse(str);
+        System.out.println("reversed: " + reversed);
+    }
+
+    public static String reverse(String str)
+    {
+        if (str.isEmpty())
+            return str;
+      
+        return reverse(str.substring(1)) + str.charAt(0);
+    }
+}
+
+
+
+
+// MANAV AGGARWAL,11902228
+// DAY2
+//QUES4,Area of Rectangle
+
+import java.util.Scanner;
+class Area 
+{
+   public static void main(String args[]) 
+    {   
+       
+      Scanner s= new Scanner(System.in);
+        
+        System.out.println("length:");
+        double l= s.nextDouble();
+        System.out.println("breadth:");
+        double b= s.nextDouble();
+        double  area=l*b;
+        System.out.println("Area: " + area);      
+   }
+}
+
+
+
+
+
+
+// MANAV AGGARWAL,11902228
+// DAY2
+//QUES5,Grading System
+
+
+import java.util.Scanner;
+
+public class Grade {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Name:");
+		String name = scan.next();
+		
+		System.out.println("roll no.:");
+		double roll = scan.nextDouble();
+		
+		System.out.println("percentage:");
+		double percentage = scan.nextDouble();
+
+		if(percentage >= 90)
+		{
+			System.out.println("Grade o");
+		}
+		else if(percentage < 90 && percentage >= 80)
+		{
+			System.out.println("Grade A1");
+		}
+		else if(percentage < 80 && percentage >= 70)
+		{
+			System.out.println("Grade A2");
+		}
+		else if(percentage < 70 && percentage >= 60)
+		{
+			System.out.println("Grade B1");
+		}
+		else if(percentage < 60 && percentage >= 50)
+		{
+			System.out.println("Grade B2");
+		}
+		else if(percentage < 50 && percentage >= 40)
+		{
+			System.out.println("Grade C1");
+		}
+		else if(percentage < 40 && percentage >= 34)
+		{
+			System.out.println("Grade P");
+		}
+		else 
+		{
+			System.out.println("Grade F");
+		}
+	}
+
+}

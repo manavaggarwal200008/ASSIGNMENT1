@@ -1,0 +1,154 @@
+// Manav Aggarwal,11902228
+// Day3
+// Ques 1, 3rd Largest  No.
+public class Manav 
+{
+   public static void main(String args[])
+   {
+   int temp, size;
+   int array[] = {1, 22, 35, 78, 87, 54};
+   size = array.length;
+   
+   for(int i = 0; i<size; i++ )
+   {
+      for(int j = i+1; j<size; j++)
+      {
+         if(array[i]>array[j])
+         {
+            temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+         }
+      }
+   }
+   System.out.println("3rd largest number is:: "+array[size-3]);
+   }
+}
+
+
+// Manav Aggarwal,11902228
+// Day3
+// Ques 2, even and odd numbers
+public class Manav
+{  
+public static void main(String args[])
+{  
+int a[]={1,2,3,4,5,6};  
+System.out.println("Odd No:");  
+for(int i=0;i<a.length;i++)
+{  
+if(a[i]%2!=0)
+{  
+System.out.println(a[i]);  
+}  
+}  
+System.out.println("Even No:");  
+for(int i=0;i<a.length;i++)
+{  
+if(a[i]%2==0)
+{  
+System.out.println(a[i]);  
+}  
+}  
+}
+    
+} 
+
+
+// Manav Aggarwal,11902228
+// Day3
+// Ques 3, ARRAY Multiply
+public class Multiply
+{  
+public static void main(String args[])
+{  
+   
+int a[][]={{1,2,3},{4,5,6},{7,8,9}};    
+int b[][]={{1,2,3},{4,5,6},{7,8,9}};    
+int c[][]=new int[3][3];  
+for(int i=0;i<3;i++)
+{    
+for(int j=0;j<3;j++)
+{    
+c[i][j]=0;      
+for(int k=0;k<3;k++)      
+{      
+c[i][j]+=a[i][k]*b[k][j];      
+}
+System.out.print(c[i][j]+" ");  
+}
+System.out.println();   
+}    
+}
+    
+}  
+
+
+// Manav Aggarwal,11902228
+// Day3
+// Ques 4, SUM of ROW and Column
+public class MANAV   
+{    
+    public static void main(String[] args) 
+    {    
+        int rows, cols, sumRow, sumCol; 
+        int a[][] = {{1, 2, 3},{4, 5, 6},{7, 8, 9}};
+        rows = a.length;    
+        cols = a[0].length; 
+        for(int i = 0; i < rows; i++)
+        {    
+            sumRow = 0;    
+            for(int j = 0; j < cols; j++)
+            {    
+              sumRow = sumRow + a[i][j];    
+            }    
+            System.out.println("Sum of " + (i+1) +" row: " + sumRow);    
+        }   
+        for(int i = 0; i < cols; i++)
+        {    
+            sumCol = 0;    
+            for(int j = 0; j < rows; j++)
+            {    
+              sumCol = sumCol + a[j][i];    
+            }    
+            System.out.println("Sum of " + (i+1) +" column: " + sumCol);    
+        }    
+    }    
+}    
+
+
+
+// Manav Aggarwal,11902228
+// Day3
+// Ques 5, Print ARRAY elements
+import java.util.Scanner;
+public class Print
+{
+static void PA(int arr[], int i, int n)
+{
+	if(i>=n)
+		return;
+	System.out.print(arr[i]+" ");
+	PA(arr,i+1,n);
+}
+	public static void main(String[] args) {
+		Scanner cs=new Scanner(System.in);
+		int n,i;
+		System.out.println("Array Size?:");
+		n=cs.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Array Element?:");
+		for(i=0;i<n;i++)
+		{
+			arr[i]=cs.nextInt();
+		}
+		System.out.print("Array Element:");
+		PA(arr,0,n);
+		cs.close();
+
+	}
+}
+
+
+
+
